@@ -29,7 +29,7 @@ const Header = () => {
       </div>
       <div className="container flex gap-1">
         {SERVICE_LIST.map((items) => (
-          <Button className={`bg-transparent shadow-none font-normal rounded-full hover:bg-white/10 cursor-pointer flex items-center justify-between gap-2 px-6 h-11  ${items.active && 'border border-white bg-white/20 '}`}
+          <Button  className={`bg-transparent shadow-none font-normal rounded-full hover:bg-white/10 cursor-pointer flex items-center justify-between gap-2 px-6 h-11  ${items.active && 'border border-white bg-white/20 '}`}
            key={items.id}>
             <Icon icon={items.icon} />
             {items.title}
