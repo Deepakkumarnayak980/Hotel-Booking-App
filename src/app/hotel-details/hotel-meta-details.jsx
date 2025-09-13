@@ -1,7 +1,7 @@
 import Icon from '@/components/ui/icon';
 import React from 'react';
 
-const HotelMetaDetails = ({ hotel }) => {
+const HotelMetaDetails = ({ hotel,info }) => {
   return (
 
     <>
@@ -30,7 +30,23 @@ const HotelMetaDetails = ({ hotel }) => {
       </div>
     </section>
 
- 
+  <section className="space-y-4 my-8">
+        <h2 className="text-xl font-bold">Amenities</h2>
+        <ul className="flex flex-wrap gap-2">
+          {hotel.amenities.map((item, index) => (
+            <li key={index} className="flex gap-2 items-center min-w-[180px]">
+              <Icon icon="check" size="18" className="text-green-600" />
+              <span className="text-sm font-medium text-muted-foreground">
+                {item}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section className="space-y-4 my-8">
+        <h2 className="text-xl font-bold">About this Property</h2>
+        <p className='text-sm leading-relaxed tracking-wide text-muted-foreground'>{info.description}</p>
+      </section>
     
     
     </>
