@@ -31,7 +31,7 @@ const HotelPolicy = ({ hotelPolicy }) => {
 
         <ul className='list-disc list-inside'> 
           {hotelPolicy.rules.map((rule,index) =>(
-            <li>
+            <li key={index}>
               {rule}
             </li>
           ))}
