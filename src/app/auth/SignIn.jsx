@@ -71,9 +71,8 @@ const SignIn = () => {
                     />
                     <Button
                       type="button"
-                      variant="ghost"
-                      size="icon"
                       onClick={handleHidePassword}
+                      
                     >
                       {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                     </Button>
