@@ -26,7 +26,7 @@ const LocationInput = ({ form }) => {
   return (
     <Popover open={isPopOverOpen} onOpenChange={setIsPopOverOpen}>
  
-      <PopoverTrigger>
+      <PopoverTrigger asChild>
         <div className="flex gap-2 items-center px-4 py-2 rounded bg-background lg:min-w-[360px] h-full">
           <Icon
             icon="bed"
@@ -46,7 +46,7 @@ const LocationInput = ({ form }) => {
               </FormControl>
             )}
           />
-          <div variant="ghost" size="icon"
+          <div
            role="button"
             className={city ? '' : 'opacity-0 pointer-events-none'}
             onClick={(e) => {

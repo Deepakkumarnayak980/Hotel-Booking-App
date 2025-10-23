@@ -23,8 +23,9 @@ const SearchPage = () => {
               className='flex flex-col gap-1 p-1 bg-yellow-500   lg:flex-row lg: items-center rounded h-14'
         >
          <LocationInput  form={form}/>
-         <OccupancyInput form={form} />
          <DateSelectInput  form={form}/>
+         <OccupancyInput form={form} />
+         
          <Button type="submit" className="text-lg h-full">Search</Button>
         </form>
     </Form>
