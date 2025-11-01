@@ -10,6 +10,7 @@ import React from 'react';
 
 const OccupancyInput = ({ form }) => {
   const rooms = form.watch('roomsCount');
+
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -34,7 +35,7 @@ const OccupancyInput = ({ form }) => {
       </PopoverTrigger>
       <PopoverContent
         sideOffset="1"
-        align='start'
+        align="start"
         className="p-4 w-80"
       >
         <FormField
@@ -45,19 +46,24 @@ const OccupancyInput = ({ form }) => {
               <FormItem className="flex items-center justify-between">
                 <FormLabel>Rooms</FormLabel>
                 <FormControl>
-                  <div className='border rounded border-foreground/50 flex items-center'>
+                  <div className="border rounded border-foreground/50 flex items-center">
                     <Button
                       size="icon"
                       variant="ghost"
                       className="size-10 text-primary hover:text-primary"
                       onClick={(e) => {
                         e.preventDefault();
-                        field.onChange(field.value - 1);
+                        if (field.value > 0) {
+                          field.onChange(field.value - 1);
+                        }
                       }}
+                      disabled={field.value <= 0} // ✅ Disable when rooms = 0
                     >
                       <Icon icon="minus" />
                     </Button>
-                    <span>{field.value}</span>
+
+                    <span className="w-8 text-center">{field.value}</span>
+
                     <Button
                       size="icon"
                       variant="ghost"
