@@ -4,6 +4,7 @@ import Header from '@/components/layout/header.layout'
 import Footer from '@/components/layout/footer.layout'
 import HotelDetails from './hotel-details'
 import { SignInPage, SignUpPage } from './auth'
+import SearchPage from './search'
 
 
 const App = () => {
@@ -11,8 +12,9 @@ const App = () => {
     <div>
       
         <Header />
-        <Home />
+        {/* <Home /> */}
         {/* <HotelDetails /> */}
+        <SearchPage />
        {/* <SignInPage /> */}
        {/* <SignUpPage /> */}
         <Footer/>
