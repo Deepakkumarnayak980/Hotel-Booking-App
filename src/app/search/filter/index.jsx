@@ -7,8 +7,7 @@ import { Form } from '@/components/ui/form';
 import useFilterForm from './hooks/use-filter-form';
 
 const Filter = () => {
-
-  const {form}=useFilterForm();
+  const { form } = useFilterForm();
 
   return (
     <aside className="border border-border max-h-max rounded-md w-[240px]">
@@ -23,9 +22,9 @@ const Filter = () => {
         </Button>
       </div>
       <Form {...form}>
-        <form >
-          <StarFilter form={form}  />
-          <PriceFilter form={form}/>
+        <form>
+          <StarFilter form={form} />
+          <PriceFilter form={form} />
         </form>
       </Form>
     </aside>
