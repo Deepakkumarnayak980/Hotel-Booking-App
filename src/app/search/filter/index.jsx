@@ -1,23 +1,35 @@
-import React from 'react'
-import StarFilter from './components/star-filter'
-import PriceFilter from './components/price-filter'
-import SortFilter from './components/sort-filter'
-import { Button } from '@/components/ui/button'
+import React from 'react';
+import StarFilter from './components/star-filter';
+import PriceFilter from './components/price-filter';
+import SortFilter from './components/sort-filter';
+import { Button } from '@/components/ui/button';
+import { Form } from '@/components/ui/form';
+import useFilterForm from './hooks/use-filter-form';
 
 const Filter = () => {
-  return (
-    <aside className='border border-border max-h-max rounded-md w-[240px]'>
-       <div>
-         <h3 className='flex items-center justify-between p-2'>Filter By:</h3>
-         <Button>
-          clear all
-         </Button>
-       </div>
-        <StarFilter />
-        <PriceFilter />
-        <SortFilter />
-    </aside>
-  )
-}
 
-export default Filter
+  const {form}=useFilterForm();
+
+  return (
+    <aside className="border border-border max-h-max rounded-md w-[240px]">
+      <div className="flex items-center justify-between p-2">
+        <h3 className="text-base font-bold">Filter By:</h3>
+        <Button
+          variant="link"
+          size="sm"
+          className="h-auto p-0 text-sm underline-offset-1"
+        >
+          Clear All
+        </Button>
+      </div>
+      <Form {...form}>
+        <form >
+          <StarFilter form={form}  />
+          <PriceFilter form={form}/>
+        </form>
+      </Form>
+    </aside>
+  );
+};
+
+export default Filter;
