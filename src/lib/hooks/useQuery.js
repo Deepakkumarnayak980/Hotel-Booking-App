@@ -16,6 +16,7 @@ function useQuery({ url, options = {} }) {
     });
 
     try {
+      await new promise((resolve) =>setTimeout(resolve,2000))
       const response = await axiosInstance(url, options);
       setQueryState({
         data: response.data,
