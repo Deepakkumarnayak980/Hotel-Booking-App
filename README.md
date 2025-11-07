@@ -13,4 +13,6 @@
 #npx shadcn@canary add popover
 #npx shadcn@canary add calender
 
-#install axios
+#install 
+
+#npx shadcn@canary add checkbox
