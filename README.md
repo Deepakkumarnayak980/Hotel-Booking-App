@@ -16,3 +16,6 @@
 #install 
 
 #npx shadcn@canary add checkbox
+#npx shadcn@canary add select 
+#npx shadcn@canary add skeliton
+
