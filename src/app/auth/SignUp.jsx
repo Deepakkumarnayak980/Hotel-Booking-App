@@ -8,8 +8,10 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { PATHS } from '@/config/path.config';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router';
 
 const SignUp = () => {
   const form = useForm({
@@ -82,7 +84,7 @@ const SignUp = () => {
             <span className='text-sm '>
               Already have an account? {' '}
               {/* TODO: replace with Link */}
-              <a href="" className='text-primary hover:underline'>Sign in</a>
+              <Link to={PATHS.SIGNIN} className='text-primary hover:underline'>Sign in</Link>
             </span>
       </div>
     </>

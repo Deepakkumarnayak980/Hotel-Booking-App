@@ -8,6 +8,7 @@ import Footer from '@/components/layout/footer.layout'
 import SignUp from './auth/SignUp'
 import SignIn from './auth/SignIn'
 import { SignInPage, SignUpPage } from './auth'
+import { PATHS } from '@/config/path.config'
 
 const Router = () => {
   return (
@@ -16,11 +17,11 @@ const Router = () => {
     <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route path="/search" element={ <SearchPage />} />
-        <Route path="/hotel/:id" element={<HotelDetails />} />
+        <Route path={PATHS.SEARCH} element={ <SearchPage />} />
+        <Route path={PATHS.HOTEL}element={<HotelDetails />} />
 
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/signin" element={<SignInPage />} />
+        <Route path={PATHS.SIGNUP} element={<SignUpPage />} />
+        <Route path={PATHS.SIGNIN} element={<SignInPage />} />
 
         
     </Routes>

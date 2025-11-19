@@ -13,6 +13,8 @@ import { useForm } from 'react-hook-form';
 
 // ✅ Import icons directly from lucide-react
 import { Eye, EyeOff } from 'lucide-react';
+import { Link } from 'react-router';
+import { PATHS } from '@/config/path.config';
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -89,7 +91,7 @@ const SignIn = () => {
             className="w-full h-10"
             aria-label="Login to your Account"
           >
-            Log in
+            Login
           </Button>
         </form>
       </Form>
@@ -98,9 +100,9 @@ const SignIn = () => {
       <div className="flex items-center justify-center mt-6">
         <span className="text-sm">
           Don't have an account?{' '}
-          <a href="#" className="text-primary hover:underline">
+          <Link to={PATHS.SIGNUP} className="text-primary hover:underline">
             Create Account
-          </a>
+          </Link>
         </span>
       </div>
     </>
