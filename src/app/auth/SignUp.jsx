@@ -10,17 +10,13 @@ import {
 import { Input } from '@/components/ui/input';
 import { PATHS } from '@/config/path.config';
 import React from 'react';
-import { useForm } from 'react-hook-form';
+
 import { Link } from 'react-router';
+import { useSignUpForm } from './hooks/use-sign-up-from';
 
 const SignUp = () => {
-  const form = useForm({
-    defaultValues: {
-      name: '',
-      email: '',
-      password: ''
-    }
-  });
+ 
+  const {form} =useSignUpForm()
 
   const onSubmit = (data) => {
     console.log('Got the data...', data);
